@@ -19,8 +19,8 @@ function Flashsales() {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 4000,
+    speed: 1500,
+    autoplaySpeed: 2500,
     cssEase: "linear",
   };
 
@@ -73,7 +73,7 @@ function Flashsales() {
           </div>
           <div className="slider">
             <Slider {...settings}>
-              {product.map((x) => (
+              {product.slice(0,14).map((x) => (
                 <ul key={x.id}>
                   <div className="photo">
                     <img src={x.images} alt="" />
@@ -105,7 +105,7 @@ function Flashsales() {
             </Slider>
           </div>
           <div className="buton">
-            <button>View All Products</button>
+            <a href="#products_section">View All Products</a>
           </div>
         </div>
       </div>

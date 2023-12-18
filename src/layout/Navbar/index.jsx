@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.scss";
+import { BasketContext } from "../../Context/BasketContext";
 
 function Navbar() {
   const [aside, setAside] = useState(false);
+  const {basket} = useContext(BasketContext)
 
   const toggleAside = () => {
     setAside(!aside);
@@ -63,7 +65,9 @@ function Navbar() {
               <i className="fas fa-search"></i>
             </div>
             <i className="fas fa-heart"></i>
-            <i onClick={handleBasket} className="fas fa-shopping-cart"></i>
+            <Link to="/basket" onClick={handleBasket} className="fa-solid fa-cart-shopping">
+                <sup>{basket.length}</sup>
+              </Link>
           </div>
         </div>
         {aside && (

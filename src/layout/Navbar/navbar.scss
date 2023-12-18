@@ -59,6 +59,16 @@
           color: #db4444;
         }
       }
+      a{
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          color: #db4444;
+          cursor: pointer;
+        }
+      }
     }
     .aside_icon {
       display: none;

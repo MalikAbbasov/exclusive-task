@@ -18,6 +18,9 @@ function BasketProvider({children}) {
         }
     }
 
+    function getTotal() {
+       return  basket.reduce((prev,x)=>prev+(x.count*x.price),0)
+    }
 
     function setCountValue(isAdd, item) {
         let elementIndex = basket.findIndex((x) => x.id === item.id);
@@ -40,7 +43,7 @@ function BasketProvider({children}) {
     
 
 const data = {
-    basket,addBasket,removeBasket,setCountValue
+    basket,addBasket,removeBasket,setCountValue,getTotal
 }
   return (
     <div>

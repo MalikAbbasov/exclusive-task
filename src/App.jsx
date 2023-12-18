@@ -6,6 +6,7 @@ import Error from "./pages/Error";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
+import Basketpage from "./pages/Basketpage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/basket" element={<Basketpage/>}/>
             <Route path="*" element={<Error/>}/>
           </Route>
         </Routes>
