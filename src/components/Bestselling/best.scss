@@ -1,0 +1,163 @@
+#best_selling{
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    .container {
+      width: 1200px;
+      border-top: 1px solid #888888;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .categories {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: start;
+        .border {
+          width: 15px;
+          height: 25px;
+          border-radius: 3px;
+          background-color: #db4444;
+        }
+        h3 {
+          font-size: 24px;
+          color: #db4444;
+        }
+      }
+      .best_category {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+          font-size: 36px;
+          letter-spacing: 1.44px;
+        }
+        .butons {
+            button{
+                width: 175px;
+                height: 40px;
+                border-radius: 10px;
+                background-color: #db4444;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+      }
+      .images{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .photo {
+            position: relative;
+            width: 100%;
+            &:hover {
+              .basket_add {
+                height: 45px;
+              }
+            }
+            img {
+              width: 97%;
+              height: 250px;
+            }
+            .sale {
+              width: 60px;
+              height: 30px;
+              border-radius: 10px;
+              background-color: #db4444;
+              color: aliceblue;
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top: 10px;
+              left: 10px;
+            }
+            .wish {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: gray;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              transition: 400ms;
+              &:hover {
+                background-color: #db4444;
+                cursor: pointer;
+              }
+            }
+            .detail {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: gray;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: 60px;
+              right: 10px;
+              transition: 400ms;
+              &:hover {
+                background-color: #db4444;
+                cursor: pointer;
+              }
+            }
+            .basket_add {
+              position: absolute;
+              bottom: 0;
+              width: 97%;
+              height: 0px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: black;
+              overflow: hidden;
+              transition: 500ms;
+              cursor: pointer;
+              color: white;
+              &:hover {
+                background-color: #db4444;
+              }
+            }
+          }
+          h4{
+            font-size: 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+          }
+          .cost{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            h6{
+                font-size: 18px;
+                color: #db4444;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: line-through;
+            }
+          }
+          .rate {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            i {
+              color: yellow;
+            }
+          }
+      }
+    }
+}

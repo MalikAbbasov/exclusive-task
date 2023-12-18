@@ -1,0 +1,158 @@
+#contact {
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  .container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      width: 350px;
+      padding: 40px 35px 51px 35px;
+      min-height: 450px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      &_up {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+        .tel {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          i {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #db4444;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          h4 {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+        .work_time {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          margin-top: 20px;
+        }
+        .phone {
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          margin-top: 10px;
+        }
+      }
+      .line {
+        width: 100%;
+        height: 2px;
+        background-color: #888888;
+      }
+      &_down {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15px;
+        .letter {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+          i {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #db4444;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          h4 {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+        p {
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          padding: 3px;
+        }
+      }
+    }
+    .right{
+        width: 760px;
+        padding: 40px 32px 40px 31px;
+        min-height: 450px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        flex-direction: column;
+        .inputs{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            input{
+                width: 230px;
+                height: 50px;
+                border-radius: 5px;
+                padding: 3px;
+                font-size: 14px;
+                border: none;
+                background-color: #dddddd;
+            }
+        }
+        textarea{
+            width: 100%;
+            height: 207px;
+            border: none;
+            background-color: #dddddd;
+            padding: 15px;
+            font-size: 16px;
+        }
+        button{
+            width: 160px;
+            height: 45px;
+            border-radius: 5px;
+            border: 1px solid #db4444;
+            background-color: #db4444;
+            color: aliceblue;
+            cursor: pointer;
+            transition: 350ms;
+            &:hover{
+                background-color: white;
+                color: #db4444;
+            }
+        }
+    }
+  }
+}
