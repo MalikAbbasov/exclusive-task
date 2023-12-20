@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./flash.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BasketContext } from "../../Context/BasketContext";
+import { WishlistContext } from "../../Context/WishlistContext/WishlsitContext";
 
 function Flashsales() {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch("https://657ef0619d10ccb465d58d01.mockapi.io/api/products/products")
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -24,14 +26,19 @@ function Flashsales() {
     cssEase: "linear",
   };
 
+  const {addBasket} = useContext(BasketContext)
+  const {addWish} = useContext(WishlistContext)
+
   return (
     <div>
       <div id="flash">
         <div className="container">
+          
           <div className="todays">
             <div className="border"></div>
             <h4>Today's</h4>
           </div>
+
           <div className="flash_sales">
             <div className="left">
               <h2>Flash Sales</h2>
@@ -71,26 +78,27 @@ function Flashsales() {
               <i className="fa-solid fa-arrow-right"></i>
             </div>
           </div>
+
           <div className="slider">
             <Slider {...settings}>
-              {product.slice(0,14).map((x) => (
+              {product.slice(0, 14).map((x) => (
                 <ul key={x.id}>
                   <div className="photo">
-                    <img src={x.images} alt="" />
+                    <img src={x.image} alt="" />
                     <div className="sale">
                       <p>-40%</p>
                     </div>
                     <div className="wish">
-                      <i className="fa-solid fa-heart"></i>
+                      <i onClick={()=>addWish(x)} className="fa-solid fa-heart"></i>
                     </div>
                     <div className="detail">
                       <i className="fa-solid fa-eye"></i>
                     </div>
-                    <div className="basket_add">
+                    <div onClick={()=>addBasket(x)} className="basket_add">
                       <p>Add to Cart</p>
                     </div>
                   </div>
-                  <li className="title">{x.title}</li>
+                  <li className="title">{x.name}</li>
                   <li className="price">{x.price} $</li>
                   <div className="rate">
                     <i className="fa-solid fa-star"></i>
@@ -104,6 +112,7 @@ function Flashsales() {
               ))}
             </Slider>
           </div>
+
           <div className="buton">
             <a href="#products_section">View All Products</a>
           </div>

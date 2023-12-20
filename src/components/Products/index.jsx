@@ -3,15 +3,18 @@ import "./product.scss";
 
 import { Link } from "react-router-dom";
 import { BasketContext } from "../../Context/BasketContext";
+import { WishlistContext } from "../../Context/WishlistContext/WishlsitContext";
 
 function Product() {
   const [product, setProduct] = useState([]);
 
 
-  const { basket, addBasket, removeBasket, setCountValue } = useContext(BasketContext)
+  const { basket, addBasket} = useContext(BasketContext)
+  const {wishlist,addWish} = useContext(WishlistContext)
+
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch("https://657ef0619d10ccb465d58d01.mockapi.io/api/products/products")
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -19,13 +22,6 @@ function Product() {
   }, []);
 
 
-  const removeAsideBasket = () => {
-    document.querySelector(".basket").classList.toggle("aside");
-  };
-
-  const handleBasket = () => {
-    document.querySelector(".basket").classList.toggle("aside")
-}
 
 
   return (
@@ -39,10 +35,12 @@ function Product() {
           <div className="products_category">
             <h2>Explore Our Products</h2>
             <div className="butons">
-              <Link to="/basket" onClick={handleBasket} className="fa-solid fa-cart-shopping">
+              <Link to="/basket" className="fa-solid fa-cart-shopping">
                 <sup>{basket.length}</sup>
               </Link>
-              <i className="fa-solid fa-heart"></i>
+              <Link to="/wishlist" className="fa-solid fa-heart">
+                <sup>{wishlist.length}</sup>
+              </Link>
             </div>
           </div>
 
@@ -52,18 +50,18 @@ function Product() {
             {product.slice(0,12).map((x) => (
               <ul key={x.id}>
                 <div className="photo">
-                  <img src={x.images} alt="" />
+                  <img src={x.image} alt="" />
                   <div className="wish">
-                    <i className="fa-solid fa-heart"></i>
+                    <i onClick={()=>{addWish(x)}} className="fa-solid fa-heart"></i>
                   </div>
-                  <div className="detail">
-                    <i className="fa-solid fa-eye"></i>
-                  </div>
+                  <Link to={`/detail/${x.id}`} className="detail">
+                    <i  className="fa-solid fa-eye"></i>
+                  </Link>
                   <div onClick={()=>{addBasket(x)}} className="add_basket">
                     <p>Add basket</p>
                   </div>
                 </div>
-                <li>{x.title}</li>
+                <li>{x.name}</li>
                 <div className="price">
                   <li className="cost">{x.price} $</li>
                   <i className="fa-solid fa-star"></i>

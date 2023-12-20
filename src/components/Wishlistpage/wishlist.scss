@@ -1,0 +1,141 @@
+
+  #wishlist{
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    .container{
+        width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &_up{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            h4{
+                font-size: 26px;
+            }
+            button{
+                width: 120px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: white;
+                color: #db4444;
+                border: 1px solid #db4444;
+                transition: 350ms;
+                cursor: pointer;
+                &:hover{
+                    background-color: #db4444;
+                    color: white;
+                }
+            }
+        }
+        &_down{
+            width: 100%;
+            .cards{
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-content: space-between;
+                gap: 10px;
+                ul {
+                  display: flex;
+                  align-items: start;
+                  justify-content: center;
+                  flex-direction: column;
+                  gap: 5px;
+                  width: 100%;
+                  .photo {
+                    position: relative;
+                    width: 100%;
+                    background-color: #e9e9e9;
+                    &:hover {
+                      .add_basket {
+                        height: 45px;
+                      }
+                    }
+                    img {
+                      width: 250px;
+                      height: 250px;
+                    }
+                    .wish {
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      background-color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      position: absolute;
+                      top: 10px;
+                      right: 10px;
+                      transition: 400ms;
+                      &:hover {
+                        background-color: #db4444;
+                        color: white;
+                        cursor: pointer;
+                      }
+                    }
+                    .detail {
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      display: flex;
+                      background-color: white;
+                      align-items: center;
+                      justify-content: center;
+                      position: absolute;
+                      top: 60px;
+                      right: 10px;
+                      transition: 400ms;
+                      &:hover {
+                        background-color: #db4444;
+                        color: white;
+                        cursor: pointer;
+                      }
+                    }
+                    .add_basket{
+                      position: absolute;
+                      bottom: 0;
+                      width: 100%;
+                      height: 0px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background-color: black;
+                      overflow: hidden;
+                      transition: 500ms;
+                      cursor: pointer;
+                      color: white;
+                      &:hover {
+                        background-color: #db4444;
+                      }
+                    }
+                  }
+                  li {
+                    font-size: 18px;
+                  }
+                  .price {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+                    .cost{
+                      color: #db4444;
+                    }
+                    i {
+                      color: rgb(255, 208, 0);
+                    }
+                  }
+                }
+              }
+        }
+    }
+  }

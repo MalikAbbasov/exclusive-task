@@ -30,8 +30,8 @@ function Basket() {
 
                     <ul key={x.id}>
                       <li className="image_name">
-                        <img src={x.images} alt="" />
-                        <div>{x.title}</div>
+                        <img src={x.image} alt="" />
+                        <div>{x.name}</div>
                         <button className='del' onClick={() => removeBasket(x.id)}>
                           x
                         </button>

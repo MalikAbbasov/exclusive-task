@@ -70,6 +70,10 @@
                 height: 20px;
                 background-color: initial;
                 border: none;
+                color: white;
+                &:focus{
+                  outline: none;
+                }
             }
             i{
                 font-size: 16px;

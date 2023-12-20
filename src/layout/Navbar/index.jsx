@@ -2,18 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.scss";
 import { BasketContext } from "../../Context/BasketContext";
+import { WishlistContext } from "../../Context/WishlistContext/WishlsitContext";
 
 function Navbar() {
   const [aside, setAside] = useState(false);
   const {basket} = useContext(BasketContext)
+  const {wishlist} = useContext(WishlistContext)
 
   const toggleAside = () => {
     setAside(!aside);
   };
 
-  const handleBasket = () => {
-    document.querySelector(".basket").classList.toggle("aside")
-}
+
 
   return (
     <div>
@@ -64,8 +64,10 @@ function Navbar() {
               <input type="text" placeholder="What are you looking for" />
               <i className="fas fa-search"></i>
             </div>
-            <i className="fas fa-heart"></i>
-            <Link to="/basket" onClick={handleBasket} className="fa-solid fa-cart-shopping">
+            <Link to="/wishlist" className="fas fa-heart">
+              <sup>{wishlist.length}</sup>
+            </Link>
+            <Link to="/basket" className="fa-solid fa-cart-shopping">
                 <sup>{basket.length}</sup>
               </Link>
           </div>

@@ -18,7 +18,7 @@ function Contactpage() {
                     <div className="line"></div>
                     <div className="left_down">
                         <div className="letter">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i className="fa-solid fa-envelope"></i>
                         <h4>Write To US</h4>
                         </div>
                         <p>Fill out our form and we will contact you within 24 hours.</p>

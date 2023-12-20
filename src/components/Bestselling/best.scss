@@ -42,8 +42,14 @@
                 border-radius: 10px;
                 background-color: #db4444;
                 color: white;
+                border: 1px solid #db4444;
                 font-size: 16px;
                 cursor: pointer;
+                transition: 350ms;
+                &:hover{
+                  background-color: aliceblue;
+                  color: #db4444;
+                }
             }
         }
       }

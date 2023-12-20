@@ -72,6 +72,7 @@
         }
       }
       .products{
+        width: 100%;
         display: grid;
         grid-template-columns: auto auto auto auto;
         justify-content: space-between;
@@ -82,15 +83,17 @@
           justify-content: center;
           flex-direction: column;
           gap: 5px;
+          width: 100%;
           .photo {
             position: relative;
+            width: 100%;
             &:hover {
               .add_basket {
                 height: 45px;
               }
             }
             img {
-              width: 100%;
+              width: 250px;
               height: 250px;
             }
             .wish {
@@ -123,6 +126,7 @@
               top: 60px;
               right: 10px;
               transition: 400ms;
+              color: black;
               &:hover {
                 background-color: #db4444;
                 color: white;
