@@ -156,3 +156,97 @@
     }
   }
 }
+@media screen and (max-width:1240px) {
+  #contact{
+    .container{
+      width: 1024px;
+      .left{
+        width: 300px;
+        min-height: 530px;
+      }
+      .right{
+        width: 700px;
+        min-height: 530px;
+        justify-content: space-around;
+        .inputs{
+          input{
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1050px) {
+  #contact{
+    .container{
+      width: 768px;
+      .left{
+        width: 240px;
+        min-height: 530px;
+      }
+      .right{
+        width: 500px;
+        min-height: 530px;
+        justify-content: space-around;
+        .inputs{
+          flex-direction: column;
+          gap: 15px;
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:768px) {
+  #contact{
+    .container{
+      width: 500px;
+      flex-direction: column;
+      gap: 15px;
+      .left{
+        width: 100%;
+        min-height: 530px;
+      }
+      .right{
+        width: 500px;
+        min-height: 530px;
+        justify-content: space-around;
+        .inputs{
+          flex-direction: column;
+          gap: 15px;
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:500px) {
+  #contact{
+    .container{
+      width: 320px;
+      flex-direction: column;
+      gap: 15px;
+      .left{
+        width: 100%;
+        min-height: 530px;
+      }
+      .right{
+        width: 100%;
+        min-height: 530px;
+        justify-content: space-around;
+        .inputs{
+          flex-direction: column;
+          gap: 15px;
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

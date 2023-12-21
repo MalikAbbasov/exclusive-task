@@ -139,13 +139,21 @@
             color: #db4444;
           }
         }
+        a {
+          font-size: 19px;
+          transition: 400ms;
+          color: black;
+          &:hover {
+            color: #db4444;
+          }
+        }
       }
 }
 }
 @media screen and (max-width: 1200px) {
   #navbar {
     .container {
-      width: 850px;
+      width: 800px;
       .pages {
         ul {
           font-size: 20px;

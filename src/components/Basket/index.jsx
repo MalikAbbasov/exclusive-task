@@ -3,7 +3,7 @@ import { BasketContext } from "../../Context/BasketContext";
 import "./basket.scss"
 import { Link } from 'react-router-dom';
 function Basket() {
-  const { basket, removeBasket, setCountValue,getTotal } = useContext(BasketContext)
+  const { basket, removeBasket, setCountValue,getTotal,getSubtotal } = useContext(BasketContext)
 
 
 
@@ -85,11 +85,11 @@ function Basket() {
               <h5>Cart Total</h5>
               <div className="total">
                 <h6>Subtotal:</h6>
-                <p>{getTotal()}</p>
+                <p>{getSubtotal()}</p>
               </div>
               <div className="shipping">
                 <h6>Shipping:</h6>
-                <p>Free</p>
+                <p>5$ for any product</p>
               </div>
               <div className="total">
                 <h6>Total:</h6>

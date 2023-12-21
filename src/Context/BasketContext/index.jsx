@@ -18,8 +18,12 @@ function BasketProvider({children}) {
         }
     }
 
+    function getSubtotal() {
+        return  basket.reduce((prev,x)=>prev+(x.count*x.price),0)
+     }
+
     function getTotal() {
-       return  basket.reduce((prev,x)=>prev+(x.count*x.price),0)
+       return  basket.reduce((prev,x)=>((prev+(x.count*x.price))+5),0)
     }
 
     function setCountValue(isAdd, item) {
@@ -43,7 +47,7 @@ function BasketProvider({children}) {
     
 
 const data = {
-    basket,addBasket,removeBasket,setCountValue,getTotal
+    basket,addBasket,removeBasket,setCountValue,getTotal,getSubtotal
 }
   return (
     <div>

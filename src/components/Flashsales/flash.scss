@@ -237,3 +237,85 @@
     }
   }
 }
+@media screen and (max-width:1270px) {
+  #flash{
+    .container{
+      width: 1000px;
+    }
+  }
+}
+@media screen and (max-width:1100px) {
+  #flash{
+    .container{
+      width: 900px;
+    }
+  }
+}
+@media screen and (max-width:970px) {
+  #flash{
+    .container{
+      width: 600px;
+      .slider{
+        ul{
+          .photo{
+            img{
+              width: 80%;
+              height: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:660px) {
+  #flash{
+    .container{
+      width: 420px;
+      .flash_sales{
+        width: 100%;
+        .left{
+          .timer{
+            display: none;
+          }
+        }
+      }
+      .slider{
+        ul{
+          .photo{
+            img{
+              width: 80%;
+              height: 160px;
+            }
+          }
+          .rate{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:500px) {
+  #flash{
+    .container{
+      width: 320px;
+      .flash_sales{
+        width: 100%;
+      }
+      .slider{
+        ul{
+          .photo{
+            img{
+              width: 80%;
+              height: 160px;
+            }
+          }
+          .rate{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

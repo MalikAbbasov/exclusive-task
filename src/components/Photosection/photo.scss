@@ -77,3 +77,18 @@
     }
   }
 }
+@media screen and (max-width:1240px) {
+  #photo_section{
+    .container{
+      width: 1000px;
+      .image{
+        .absolutes{
+          h1{
+            width: 100%;
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}

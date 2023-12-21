@@ -87,3 +87,45 @@
       }
     }
   }
+
+  @media screen and (max-width:1300px) {
+    #login_page{
+      justify-content: center;
+      .container{
+        width: 80%;
+        .photo{
+          width: 60%;
+          height: 350px;
+        }
+        .login{
+          width: 30%;
+          .inpt{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width:1024px) {
+    #login_page{
+      justify-content: center;
+      .container{
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        .photo{
+          width: 50%;
+          height: 300px;
+        }
+        .login{
+          width: 50%;
+          p{
+            width: 100%;
+          }
+          .inpt{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }

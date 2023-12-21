@@ -167,3 +167,43 @@
       }
     }
 }
+@media screen and (max-width:1240px) {
+  #best_selling{
+    .container{
+      width: 970px;
+    }
+  }
+}
+@media screen and (max-width:1120px) {
+  #best_selling{
+    .container{
+      width: 800px;
+      .images{
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}
+@media screen and (max-width:820px) {
+  #best_selling{
+    .container{
+      width: 500px;
+      .images{
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}
+@media screen and (max-width:560px) {
+  #best_selling{
+    .container{
+      width: 320px;
+      .images{
+        display: grid;
+        grid-template-columns: auto;
+      }
+    }
+  }
+}

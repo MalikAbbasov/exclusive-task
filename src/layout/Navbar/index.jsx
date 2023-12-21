@@ -116,8 +116,12 @@ function Navbar() {
                   <input type="text" placeholder="What are you looking for" />
                   <i className="fas fa-search"></i>
                 </div>
-                <i className="fas fa-heart"></i>
-                <i className="fas fa-shopping-cart"></i>
+                <Link to="/wishlist" className="fas fa-heart">
+              <sup>{wishlist.length}</sup>
+            </Link>
+            <Link to="/basket" className="fa-solid fa-cart-shopping">
+                <sup>{basket.length}</sup>
+              </Link>
               </div>
             </div>
           )}
